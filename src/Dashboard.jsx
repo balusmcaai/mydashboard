@@ -1,3 +1,4 @@
+// src/Dashboard.jsx
 import { useState, useEffect } from "react";
 
 function TodoWidget() {
@@ -40,7 +41,7 @@ function TodoWidget() {
           <li
             key={index}
             onClick={() => toggleTask(index)}
-            className={\`cursor-pointer mb-1 \${task.done ? "line-through text-gray-500" : ""}\`}
+            className={`cursor-pointer mb-1 ${task.done ? "line-through text-gray-500" : ""}`}
           >
             {task.text}
           </li>
@@ -88,6 +89,7 @@ export default function Dashboard() {
       <TodoWidget />
       <QuoteWidget />
       <ClockWidget />
+      {/* More widgets can be added here */}
     </div>
   );
 }
